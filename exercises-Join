@@ -1,0 +1,18 @@
+Сан францискогын оффист ажилдаг ажилчдын мэдээллийг гарга
+
+select \* from employees LEFT JOIN offices ON employeeNumber = employeeNumber where city = 'San Francisco ';
+
+Америкт нийт хэдэн ажилтан ажиллаж байна вэ
+select \* from employees LEFT JOIN offices ON employeeNumber = employeeNumber where country = 'USA';
+
+Хот бүрээр ажилтны тоог гарга (хамгийн их ажилтантай хот хамгийн бага нь аль вэ)
+
+select \* from offices order by city desc;
+
+Credit Limit хамгийн өндөр хэрэглэгч хэн бэ?
+select max(creditLimit), customerName from customers;
+
+NYC - д байдаг хамгийн өндөр credit limit-тэй хэрэглэгч хэн бэ?
+
+select max(creditLimit), customerName from customers where city = 'NYC';
+Хамгийн өндөр худалдан авалттай, хамгийн олон худалдан авалттай хэрэглэгчийн мэдээллийг гарга
